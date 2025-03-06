@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AeroVision | Управление пассажирами</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto+Flex:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body>git add .gitignore
+    <div class="container py-5">
+        <!-- Заголовок -->
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-gradient">
+                <i class="bi bi-people-fill me-3"></i>Управление пассажирами
+            </h1>
+            <p class="lead text-muted">Авиакомпания "PETERS"</p>
+        </div>
+
+        <!-- Форма добавления -->
+        <div class="card glass-card mb-5 animate__animated animate__fadeIn">
+            <div class="card-header bg-transparent border-0 py-4">
+                <h2 class="mb-0 text-primary"><i class="bi bi-person-plus me-2"></i>Добавить нового пассажира</h2>
+            </div>
+            <div class="card-body">
+                <form id="addPassengerForm" class="neon-form">
+                    <div class="row g-3">
+                        <!-- Имя -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control input-glass" id="firstName" placeholder="Имя" required>
+                                <label for="firstName"><i class="bi bi-person me-2"></i>Имя</label>
+                            </div>
+                        </div>
+
+                        <!-- Фамилия -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control input-glass" id="lastName" placeholder="Фамилия" required>
+                                <label for="lastName"><i class="bi bi-person-badge me-2"></i>Фамилия</label>
+                            </div>
+                        </div>
+
+                        <!-- Дата рождения -->
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                <input type="date" class="form-control input-glass" id="birthDate" required>
+                                <label for="birthDate"><i class="bi bi-calendar-event me-2"></i>Дата рождения</label>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                <input type="email" class="form-control input-glass" id="email" placeholder="Email" required>
+                                <label for="email"><i class="bi bi-envelope me-2"></i>Email</label>
+                            </div>
+                        </div>
+
+                        <!-- Телефон -->
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                <input type="tel" class="form-control input-glass" id="phone" pattern="\+7\d{10}" placeholder="Телефон" required>
+                                <label for="phone"><i class="bi bi-phone me-2"></i>Телефон</label>
+                            </div>
+                        </div>
+
+                        <!-- Кнопка отправки -->
+                        <div class="col-12 mt-4">
+                            <button type="submit" class="btn btn-glow w-100 py-3">
+                                <i class="bi bi-send-check me-2"></i>Добавить пассажира
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Список пассажиров -->
+        <div class="card glass-card animate__animated animate__fadeIn">
+            <div class="card-header bg-transparent border-0 py-4">
+                <h2 class="mb-0 text-primary"><i class="bi bi-list-task me-2"></i>Список пассажиров</h2>
+            </div>
+            <div class="card-body">
+                <div id="passengersList" class="row g-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
